@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscar</title>
+</head>
+<body>
+
+<h1>Buscar Livro</h1>
+
+<form method="POST">
+
+<input type="text" name="titulo">
+
+<button type="submit">Buscar</button>
+
+</form>
+
+{% if livro %}
+
+<hr>
+
+<p><b>Título:</b> {{ livro.titulo }}</p>
+<p><b>Autor:</b> {{ livro.autor }}</p>
+<p><b>Ano:</b> {{ livro.ano }}</p>
+<p><b>Categoria:</b> {{ livro.categoria }}</p>
+<p><b>Quantidade:</b> {{ livro.quantidade }}</p>
+
+{% endif %}
+
+<h3>{{ mensagem }}</h3>
+
+<br>
+
+<a href="/">Voltar</a>
+
+</body>
+</html>

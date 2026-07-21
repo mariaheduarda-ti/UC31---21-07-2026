@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Livros</title>
+</head>
+<body>
+
+<h1>Livros Cadastrados</h1>
+
+{% if livros %}
+
+{% for livro in livros %}
+
+<hr>
+
+<p><b>Título:</b> {{ livro.titulo }}</p>
+<p><b>Autor:</b> {{ livro.autor }}</p>
+<p><b>Ano:</b> {{ livro.ano }}</p>
+<p><b>Categoria:</b> {{ livro.categoria }}</p>
+<p><b>Quantidade:</b> {{ livro.quantidade }}</p>
+
+<a href="/editar/{{ loop.index0 }}">Editar</a>
+
+<a href="/excluir/{{ loop.index0 }}">Excluir</a>
+
+{% endfor %}
+
+{% else %}
+
+<h2>Nenhum livro cadastrado.</h2>
+
+{% endif %}
+
+<br><br>
+
+<a href="/">Cadastrar outro livro</a>
+
+</body>
+</html>

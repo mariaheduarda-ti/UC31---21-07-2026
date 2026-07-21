@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar do Campeonato</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🏆 Copa TechFuture 2026 ⚽</h1>
+
+    <p class="info">📅 Data: {{ data }}</p>
+
+    <p class="info">🏆 Líder Atual: {{ lider }}</p>
+
+    <p class="info">⭐ Time Favorito da Torcida: Brasil</p>
+
+    <p class="info">⚽ Total de Pontos: {{ total }}</p>
+
+    <div class="times">
+
+        <div class="card">
+            <h2>🇧🇷 Brasil</h2>
+            <p>{{ brasil }} pontos</p>
+            <a href="/ponto/brasil">+1 Ponto</a>
+        </div>
+
+        <div class="card">
+            <h2>🇦🇷 Argentina</h2>
+            <p>{{ argentina }} pontos</p>
+            <a href="/ponto/argentina">+1 Ponto</a>
+        </div>
+
+        <div class="card">
+            <h2>🇫🇷 França</h2>
+            <p>{{ franca }} pontos</p>
+            <a href="/ponto/franca">+1 Ponto</a>
+        </div>
+
+        <div class="card">
+            <h2>🇪🇸 Espanha</h2>
+            <p>{{ espanha }} pontos</p>
+            <a href="/ponto/espanha">+1 Ponto</a>
+        </div>
+
+    </div>
+
+    <div class="ranking">
+
+        <h2>🥇 Ranking</h2>
+
+        <ol>
+            <li>🇧🇷 Brasil - {{ brasil }} pontos</li>
+            <li>🇦🇷 Argentina - {{ argentina }} pontos</li>
+            <li>🇫🇷 França - {{ franca }} pontos</li>
+            <li>🇪🇸 Espanha - {{ espanha }} pontos</li>
+        </ol>
+
+    </div>
+
+    <div class="botao">
+
+        <a href="/zerar">
+            🔄 Zerar Campeonato
+        </a>
+
+    </div>
+
+    <footer>
+        Desenvolvido por Mariah Eduarda e Gabriel Roberto © 2026
+    </footer>
+
+</div>
+
+</body>
+</html>
